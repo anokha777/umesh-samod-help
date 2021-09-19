@@ -8,8 +8,8 @@ const otpController = {
           res.status(200).send({
             token: appConstants.token,
             username: 'admin',
-            fname: 'Admin',
-            lname: 'Admin'
+            fname: 'Umesh',
+            lname: 'Samod'
           });
         } else {
           res.status(401).send({
