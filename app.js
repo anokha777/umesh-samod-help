@@ -1,13 +1,16 @@
 const express = require('express');
 const helmet = require('helmet');
+let cors = require("cors");
+
 const helpRouter = require('./src/routers/helpRouter');
 
 const app = express();
+app.use(cors());
 app.use(helmet());
 const port = process.env.PORT || 8080;
 
 //Body Parser middleware
-app.use(express.json());
+app.use(express.json()); 
 app.use(express.urlencoded({
   extended: true
 }));
